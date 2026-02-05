@@ -55,7 +55,7 @@ public class NotaController {
         if (nota.getId() == 0) {
             model.put("mensajeError", "Nota no encontrada");
         }
-        context.render("templates/nota.ftl", model);
+        context.render("templates/item.ftl", model);
     }
 
     public static void servirCrearNota(Context context){
@@ -112,7 +112,7 @@ public class NotaController {
         if (nota.getId() == 0) {
             model.put("mensajeError", "Nota no encontrada");
         }
-        context.render("templates/nota.ftl", model);
+        context.render("templates/item.ftl", model);
     }
 
     public static void eliminarNota(Context context){
