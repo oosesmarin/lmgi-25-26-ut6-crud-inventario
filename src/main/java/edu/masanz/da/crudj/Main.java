@@ -2,7 +2,6 @@ package edu.masanz.da.crudj;
 
 import edu.masanz.da.crudj.app.App;
 import edu.masanz.da.crudj.controller.ItemController;
-import edu.masanz.da.crudj.controller.NotaController;
 
 import io.javalin.Javalin;
 import io.javalin.rendering.template.JavalinFreemarker;
@@ -27,14 +26,15 @@ public class Main {
 
         app.get("/", ItemController::servirIndice);
         app.get("/lista-items", ItemController::servirLista);
-        app.get("/item/{id}", ItemController::servirNota);
-//        app.get("/crea-item", NotaController::servirCrearNota);
-//        app.post("/crea-item", NotaController::crearNota);
-//        app.get("//edita-item/{id}", NotaController::servirEditarNota);
-//        app.post("//edita-item/{id}", NotaController::editarNota);
-//        app.get("/elimina-item/{id}", NotaController::servirEliminarNota);
-//        app.post("/elimina-item/{id}", NotaController::eliminarNota);
-//        app.get("/error", NotaController::servirError);
+        app.get("/item/{id}", ItemController::servirItem);
+        app.get("/crea-item", ItemController::servirCrearItem);
+        app.post("/crea-item", ItemController::crearItem);
+        app.get("//edita-item/{id}", ItemController::servirEditarItem);
+        app.post("//edita-item/{id}", ItemController::editarItem);
+//        app.get("/elimina-item/{id}", ItemController::servirEliminarItem);
+//        app.post("/elimina-item/{id}", ItemController::eliminarItem);
+        app.get("/elimina-item/{id}", ItemController::eliminarItem);
+        app.get("/error", ItemController::servirError);
 
     }
 

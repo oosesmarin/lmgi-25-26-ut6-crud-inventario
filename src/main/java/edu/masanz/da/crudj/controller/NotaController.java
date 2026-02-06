@@ -63,7 +63,7 @@ public class NotaController {
         Nota nota = new Nota();
         model.put("agregar", true);
         model.put("nota", nota);
-        context.render("templates/form-nota.ftl", model);
+        context.render("templates/form-item.ftl", model);
     }
 
     public static void crearNota(Context context){
@@ -88,7 +88,7 @@ public class NotaController {
         if (nota.getId() == 0) {
             model.put("mensajeError", "Nota no encontrada");
         }
-        context.render("templates/form-nota.ftl", model);
+        context.render("templates/form-item.ftl", model);
     }
 
     public static void editarNota(Context context){

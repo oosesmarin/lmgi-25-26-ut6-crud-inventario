@@ -16,7 +16,12 @@
         
     <#if !mensajeError??>
         <table id="notas">
-            <tbody><tr>
+            <tbody>
+            <tr>
+                <th>ID</th>
+                <td>${item.id}</td>
+            </tr>
+            <tr>
                 <th>Item</th>
                 <td>${item.nombre}</td>
             </tr>
@@ -30,13 +35,13 @@
     </#if>
 
     <#if eliminar>
-        <form action="/elimina-item/${item.nombre}" method="POST">
+        <form action="/elimina-item/${item.id}" method="POST">
             ¿Seguro que desea eliminar el item? <input type="submit" value="Confirmar" />
         </form>
     <#else>
         <div>
-            <a href="/elimina-item/${item.nombre}">Eliminar</a>
-            <a href="/edita-item/${item.nombre}">Editar</a>
+            <a href="/elimina-item/${item.id}">Eliminar</a>
+            <a href="/edita-item/${item.id}">Editar</a>
         </div>
     </#if>
 

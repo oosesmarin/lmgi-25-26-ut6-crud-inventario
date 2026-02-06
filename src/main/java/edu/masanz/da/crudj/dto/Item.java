@@ -1,16 +1,29 @@
 package edu.masanz.da.crudj.dto;
 
 public class Item {
+    private int id;
     private String nombre;
     private int cantidad;
 
+    public Item(int id, String nombre, int cantidad) {
+        this.id = id;
+        this.nombre = nombre;
+        this.cantidad = cantidad;
+    }
+
     public Item(String nombre, int cantidad) {
+        this.id = 0;
         this.nombre = nombre;
         this.cantidad = cantidad;
     }
 
     public Item(String nombre) {
         this.nombre = nombre;
+        this.cantidad = 0;
+    }
+
+    public Item() {
+        this.nombre = null;
         this.cantidad = 0;
     }
 
@@ -24,6 +37,18 @@ public class Item {
 
     public void setCantidad(int cantidad) {
         this.cantidad = cantidad;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     @Override

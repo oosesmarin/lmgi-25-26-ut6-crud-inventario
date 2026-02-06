@@ -15,15 +15,17 @@
 <div>
     <table id="notas">
         <tbody><tr>
+            <th>ID</th>
             <th>Item</th>
             <th>Cantidad</th>
         </tr>
         <#list items as item>
             <tr>
-                <td><a href="/item/${item.nombre}">${item.nombre}</a></td>
+                <td><a href="/item/${item.id}">${item.id}</a></td>
+                <td>${item.nombre}</td>
                 <td>${item.cantidad}</td>
-                <td><a href="/edita-item/${item.nombre}">Editar</a></td>
-                <td><a href="/elimina-item/${item.nombre}">Borrar</a></td>
+                <td><a href="/edita-item/${item.id}">Editar</a></td>
+                <td><a href="/elimina-item/${item.id}">Borrar</a></td>
             </tr>
         </#list>
         </tbody>

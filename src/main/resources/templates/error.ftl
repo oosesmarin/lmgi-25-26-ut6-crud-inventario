@@ -9,7 +9,7 @@
 <div class="container">
     <h1>ERROR</h1>
     <p class="center">Regreso a la aplicación</p>
-    <a class="center" href="/lista-notas">Notas</a>
+    <a class="center" href="/lista-items">Items</a>
 </div>
 </body>
 </html>

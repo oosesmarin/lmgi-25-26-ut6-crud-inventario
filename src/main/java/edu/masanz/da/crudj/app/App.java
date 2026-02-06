@@ -55,7 +55,7 @@ public class App {
     }
 
     private boolean perderItem(String idItem) {
-        Item item = InventarioDao.getItemById(idItem);
+        Item item = InventarioDao.getItemByNombre(idItem);
         if (item != null) {
             int cantidad = (int) (Math.random() * item.getCantidad()) + 1;
             InventarioDao.perderItem(item, cantidad);
